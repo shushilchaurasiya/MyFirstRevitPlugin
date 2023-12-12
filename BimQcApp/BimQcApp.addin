@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Name>BimQcApp</Name>
+		<Assembly>.\BIMQcApp\BimQcApp.dll</Assembly>
+		<AddInId>5CC8E85B-CF3F-4964-841B-84F4B062232B</AddInId>
+		<FullClassName>BimQcApp.GetElementId</FullClassName>
+		<Text>GetElementId</Text>
+		<Description>Gets the element Id from an element.</Description>
+		<VendorId>ShushilChaurasiya</VendorId>
+		<VendorDescription>@SPChaurasiya</VendorDescription>
+		<VisibilityMode>NotVisibleWhenNoActiveDocument</VisibilityMode>
+	</AddIn>
+</RevitAddIns>
