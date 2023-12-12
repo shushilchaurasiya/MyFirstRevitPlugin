@@ -17,7 +17,24 @@ namespace BimQcApp
             // Get UIDocument
             var uiDoc = commandData.Application.ActiveUIDocument;
 
-            return Result.Succeeded;
+            try
+            {
+                // Pick Object
+                Reference pickedObj = uiDoc.Selection.PickObject(Autodesk.Revit.UI.Selection.ObjectType.Element);
+
+                // Display Element Id
+                if (pickedObj != null)
+                {
+                    TaskDialog.Show("Element Id", pickedObj.ElementId.ToString());
+                }
+
+                return Result.Succeeded;
+            }
+            catch (Exception ex)
+            {
+                message = ex.Message;
+                return Result.Failed;
+            }
         }
     }
 }
