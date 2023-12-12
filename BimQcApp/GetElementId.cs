@@ -14,6 +14,9 @@ namespace BimQcApp
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elements)
         {
+            // Get UIDocument
+            var uiDoc = commandData.Application.ActiveUIDocument;
+
             return Result.Succeeded;
         }
     }
